@@ -12,7 +12,7 @@ module.exports = {
         const station_id = req.headers.authorization;
 
         const incidents = await connection('incidents')
-            .where('service_station_id', station_id)
+            .where('ong_id', station_id)
             .select('*');
 
         return res.json(incidents);

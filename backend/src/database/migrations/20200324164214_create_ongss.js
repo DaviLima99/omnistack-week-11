@@ -1,5 +1,5 @@
 exports.up = function(knex) {
-  return knex.schema.createTable('service_stations', function(table) {
+  return knex.schema.createTable('ongs', function(table) {
 
       table.increments().primary();
       table.string('name').notNullable();
@@ -13,5 +13,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable('service_station');
+  return knex.schema.dropTable('ongs');
 };

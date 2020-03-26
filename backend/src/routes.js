@@ -6,7 +6,7 @@ const express = require('express');
 
 const routes = express.Router();
 
-const ServiceStationController = require('./controllers/ServiceStationController');
+const OngController = require('./controllers/OngController');
 const IncidentController = require('./controllers/IncidentController');
 const ProfileController = require('./controllers/ProfileController');
 const SessionController = require('./controllers/SessionController');
@@ -24,11 +24,11 @@ routes.post('/sessions', SessionController.login);
  */
 
 
-// List all service stations
-routes.get('/stations', ServiceStationController.index);
+// List all  ongs
+routes.get('/ongs', OngController.index);
 
-// Save a service station
-routes.post('/stations', ServiceStationController.create);
+// Save a  station
+routes.post('/ongs', OngController.create);
 
 // Save a incident
 routes.post('/incidents', IncidentController.create);

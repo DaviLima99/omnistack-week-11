@@ -5,15 +5,14 @@ exports.up = function(knex) {
         table.increments().primary();
 
         table.string('name').notNullable();
-        table.string('cpf').notNullable();
         table.string('description').notNullable();
-        table.string('contact');
+        table.float('value');
         
-        table.integer('service_station_id').unsigned().notNullable();
+        table.integer('ong_id').unsigned().notNullable();
         
         table.timestamps();
 
-        table.foreign('service_station_id').references('id').inTable('service_station');
+        table.foreign('ong_id').references('id').inTable('ongs');
     })
 };
       

@@ -15,16 +15,16 @@ module.exports = {
         const [count] = await connection('incidents').count();
 
         const incidents = await connection('incidents')
-            .join('service_stations', 'service_stations.id', '=', 'incidents.service_station_id')
+            .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
             .limit(limit)
             .offset((page - 1) * limit)
             .select([
                 'incidents.*', 
-                'service_stations.name', 
-                'service_stations.email', 
-                'service_stations.wpp', 
-                'service_stations.city', 
-                'service_stations.uf'
+                'ongs.name', 
+                'ongs.email', 
+                'ongs.wpp', 
+                'ongs.city', 
+                'ongs.uf'
             ]);
         
         res.header('X-Total-Count', count['count(*)']);
@@ -39,12 +39,12 @@ module.exports = {
      * @param {object} res 
      */
     async create(req, res) {
-        const {name, description, cpf, contact} = req.body;
+        const {name, description,value} = req.body;
 
-        const service_station_id = req.headers.authorization;
+        const ong_id = req.headers.authorization;
 
         const result = await connection('incidents').insert({
-            name, description, cpf, contact, service_station_id
+            name, description, value, ong_id
         })
         
         return res.json({"id": result[0]});
@@ -58,15 +58,15 @@ module.exports = {
      */
     async delete(req, res) {
         const { id } = req.params;
-        const service_station_id = req.headers.authorization;
+        const ong_id = req.headers.authorization;
 
         
         const incident = await connection('incidents')
             .where('id', id)
-            .select('service_station_id')
+            .select('ong_id')
             .first();
 
-        if (incident.service_station_id != service_station_id) {
+        if (incident.ong_id != ong_id) {
             return res.status(401).json({erro: 'Operation not permitted!'});
         }
 

@@ -3,14 +3,14 @@ const connection = require('../database/connection');
 module.exports = {
 
     async index(req, res) {
-        const stations = await connection('service_stations').select('*');
-        return res.json(stations);
+        const ongs = await connection('ongs').select('*');
+        return res.json(ongs);
     },
 
     async create(req, res) {
         const {name, email, wpp, city, uf} = req.body;
 
-        await connection('service_stations').insert({
+        const response = await connection('ongs').insert({
             name, 
             email,
             wpp,
@@ -18,8 +18,11 @@ module.exports = {
             uf
         })
 
+        console.log(response);
+
         return res.json({
-            message: "Success!"
+            message: "Cadastro realizado com sucesso!",
+            id: response
         });
     }
 };
