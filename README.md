@@ -47,7 +47,9 @@ Project developed to help institutions register and receive help in their cases.
 <h1 align="center">
     <img alt="Omnisteck" title="#login" src=".github/login-page.png" width="100%" />
 </h1>
-## Getting Started
+
+## 💾 Getting Atarted
+
 **Installing**
 
 **Cloning the Repository**
