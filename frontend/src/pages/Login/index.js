@@ -22,7 +22,7 @@ export default function Login() {
 
             history.push('profile');
         } catch (error) {
-            alert("Falaha no login, tente novamente!");        
+            alert("Falha no login, tente novamente!");        
         }
     }
 
