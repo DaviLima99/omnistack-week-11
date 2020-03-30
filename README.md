@@ -1,6 +1,6 @@
 
 <h1 align="center">
-    <img alt="Omnisteck" title="#omnisteck" src=".github/omnistack-wallpaper.png" width="250px" />
+    <img alt="Omnisteck" title="#omnisteck" src=".github/omnistack-wallpaper.png" />
 </h1>
 
 <h4 align="center">
@@ -33,10 +33,6 @@
 
 <br>
 
-<p align="center">
-  <img alt="Frontend" src=".github/devradar.png" width="100%">
-</p>
-
 ## 👨‍💻 Build With
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -49,7 +45,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Project
 Project developed to help institutions register and receive help in their cases.
 <h1 align="center">
-    <img alt="Omnisteck" title="#login" src=".github/login-page.png" width="250px" />
+    <img alt="Omnisteck" title="#login" src=".github/login-page.png" width="100%" />
 </h1>
 ## Getting Started
 **Installing**
