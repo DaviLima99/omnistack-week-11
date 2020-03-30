@@ -35,8 +35,6 @@
 
 ## 👨‍💻 Build With
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
-
 - [Node.js](https://nodejs.org/en/)
 - [React](https://reactjs.org)
 - [React Native](https://facebook.github.io/react-native/)
@@ -49,9 +47,6 @@ Project developed to help institutions register and receive help in their cases.
 </h1>
 
 ## 💾 Getting Atarted
-
-**Installing**
-
 **Cloning the Repository**
 
 ```
